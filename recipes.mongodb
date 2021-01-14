@@ -1,16 +1,6 @@
-/*
 
-Insert 3 new recipes and their ingredients, amounts, and measures in to the Database
-	
-Write a query to get a list of all the Recipes
-	
-Write a query to get a list of Recipes that use a certain Ingredient
-	
-Write a query to update a recipe you added
-		
-Put your SQL commands in a file in a Github repo and submit the repo link to Lab 1
+// use('mongodbVSCodePlaygroundDB');
 
-*/
 
 const recipesArr =
 [
@@ -82,24 +72,110 @@ const recipesArr =
     }
   ];
 
+
+
 use('mongodbVSCodePlaygroundDB');
 
-db.recipes.drop();
-db.recipes.insertMany(recipesArr);
+// db.recipes.drop();
+// db.recipes.insertMany(recipesArr);
 
 
-db.recipes.find();
+// db.recipes.find();
 
-db.recipes.find({"ingredients.ingredientName": "bread"});
+// db.recipes.find({"ingredients.ingredientName": "bread"});
 
-//update recipe
+// //update recipe
 
 
-db.recipes.updateOne(
-   { recipeName: "Taco" },
-   {
-     $set: { "recipeName": "Taco Tuesday"}
-   }
-);
+// db.recipes.updateOne(
+//    { recipeName: "Taco" },
+//    {
+//      $set: { "recipeName": "Taco Tuesday"}
+//    }
+// );
 
-db.recipes.find();
+
+
+// Insert 3 new recipes and their ingredients, amounts, and measures in to the Database
+// db.recipes.insertOne(
+//   {
+//       "recipeName": "Strawberries and Chocolate",
+//       "recipeDesc": "Chocolate dipped in strawberries",
+//       "instructions": "Melt chocolate. Dips strawberries in melted chocolate. Enjoy!",
+//       "ingredients": [
+//         {
+//           "ingredientName": "strawberries",
+//           "measure": "whole",
+//           "qty": "10"
+//         },
+//         {
+//           "ingredientName": "chocolate",
+//           "measure": "cup",
+//           "qty": ".5"
+//         }
+//       ]
+//   }
+// )
+
+// db.recipes.insertMany(
+//   [{
+//       "recipeName": "Brewed Tea",
+//       "recipeDesc": "A liter of tea",
+//       "instructions": "Boil water, then steep tea in water for 5 minutes. Strain. Sweeten if you\'d like!",
+//       "ingredients": [
+//         {
+//           "ingredientName": "tea",
+//           "measure": "grams",
+//           "qty": "3"
+//         },
+//         {
+//           "ingredientName": "water",
+//           "measure": "liter",
+//           "qty": "1"
+//         }
+//       ]
+//   },
+//   {
+//       "recipeName": "Prosciutto-wrapped egg",
+//       "recipeDesc": "A paleo protein bomb",
+//       "instructions": "Boil egg to your preferred doneness. once cool, peel and wrap with prosciutto slices.",
+//       "ingredients": [
+//         {
+//           "ingredientName": "prosciutto",
+//           "measure": "slices",
+//           "qty": "2"
+//         },
+//         {
+//           "ingredientName": "egg",
+//           "measure": "whole",
+//           "qty": "1"
+//         }
+//       ]
+//   }
+// ])
+
+
+// Write a query to get a list of all the Recipes
+  // db.recipes.find();
+
+// Write a query to get a list of Recipes that use a certain Ingredient
+	// db.recipes.find({"ingredients.ingredientName":"cheese"});
+
+// Write a query to update a recipe you added
+  
+  db.recipes.find();
+
+  // db.recipes.updateOne(
+  //   {recipeName:"Strawberries and Chocolate"},
+  //   {
+  //     $set: {
+  //     "recipeName":"Raspberries and Chocolate",
+  //     "instructions":"Melt chocolate. Dips raspberries in melted chocolate. Enjoy!"
+  //     }
+  //   }
+  // )
+
+
+
+// Put your SQL commands in a file in a Github repo and submit the repo link to Lab 1
+
